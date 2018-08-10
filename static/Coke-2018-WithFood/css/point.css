@@ -1,0 +1,49 @@
+body {
+  height: auto; }
+
+.form li:after {
+  width: 100%; }
+.form p {
+  width: 100%;
+  text-align: center; }
+.form .error_pos,
+.form .checked {
+  font-size: 2rem;
+  right: 6px;
+  bottom: 8px; }
+
+.form input[type=text].number,
+.form input[type=email].number,
+.form input[type=tel].number,
+.form input[type=password].number {
+  text-align: center;
+  font-family: 'Roboto Mono', monospace; }
+
+.result {
+  margin: 50px 0 20px; }
+  .result p {
+    font-size: 1.3rem; }
+    .result p span {
+      font-size: 2rem;
+      color: #e0061c; }
+
+.add_btn {
+  color: #4a4a4a;
+  margin: 20px auto; }
+  .add_btn span {
+    font-size: 2.5rem;
+    display: inline-block;
+    vertical-align: middle; }
+    .add_btn span:last-child {
+      font-size: 1.3rem;
+      margin-left: 10px; }
+
+.wrap .bonus {
+  padding-top: 15px; }
+
+.coupon {
+  margin: 20px auto; }
+
+
+
+/*# sourceMappingURL=point.css.map */

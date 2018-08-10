@@ -1,0 +1,141 @@
+.lightbox {
+    background-color: rgba(34, 34, 34, 0.85);
+    position: fixed;
+    z-index: 10;
+    @extend %all-100;
+}
+
+.lightbox_outter {
+    width: 80%;
+    max-width: 300px;
+    position: relative;
+    margin: 40% auto 0;
+    @media only screen and (min-width: 1025px) {
+        margin-top: 20%;
+    }
+    .main {
+        width: 100%;
+        background: white;
+        border-radius: 30px;
+        overflow: hidden;
+        text-align: center;
+        padding: 40px 10px;
+        .btnBox{
+            font-size: 0;
+            width: calc(100% + 20px );
+            margin-left: -10px;
+            margin-top: 20px;
+        }
+        .btn-gift{
+            width: 50%;
+            display: inline-block;
+            font-size: 1.6rem;
+            color: white;
+            background: $coke;
+            padding: 15px 0;
+            @extend %fw_m;
+        }
+    }
+    h2 {
+        font-size: 3rem;
+        position: relative;
+        &:after {
+            content: "";
+            width: 30px;
+            height: 3px;
+            background: $l-coke;
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    p {
+        margin-top: 30px;
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+    }
+    .detail {
+        text-align: left;
+        margin: 30px 10px;
+        .date {
+            @include cir(45px);
+            line-height: 45px;
+            color: white;
+            background: $coke;
+            text-align: center;
+            @extend %fw_m;
+            margin-right: 10px;
+        }
+        .item {
+
+            width: calc(100% - 55px);
+        }
+        .code {
+            width: 100%;
+            color: $l-gray;
+            margin-top: 10px;
+            padding-left: 55px;
+            display: block;
+        }
+        li {
+            margin-bottom: 30px;
+            font-size: 1.3rem;
+            span {
+                vertical-align: middle;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+.btn-lightbox {
+    @include cir(60px);
+    background: $coke;
+    @extend %flex-mid;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+}
+
+.lightbox-record {
+    overflow: scroll;
+    .lightbox_outter {
+
+        @media screen and (max-width: 413px) {
+            margin-top:20%;
+        }
+    }
+}
+
+.main-exchange {
+    padding-bottom: 0;
+    .txt {
+        margin-top: 30px;
+    }
+    p {
+        margin: 10px 15px;
+        letter-spacing: 1px;
+    }
+    .red {
+        color: $coke;
+        font-size: 1.6rem;
+    }
+    .plus {
+        margin: 0 5px;
+    }
+}
+.lightbox_outter{
+    .main-exchange,.main-delivery {
+        padding-top: 20px;
+        padding-bottom: 0;
+    }
+}
+.main-delivery {
+
+    p {
+        @extend %txt_justify;
+        margin: 30px 15px 20px ;
+    }
+    
+}

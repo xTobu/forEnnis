@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http - equiv="x-ua-compatible" content="ie=edge">
+    <title>Coca-cola 食尚餐廚集點送</title>
+    <!-- facebook share-->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="#{pagetitle}">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:site_name" content="可口可樂®">
+    <meta property="og:url" content="https://www.coca-cola.com.tw/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon-->
+    <link rel="icon" href="img/favicon.ico">
+    <!-- css style-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--if gt IE 9-->
+    <script src="js/vendor/html5shiv.js"></script>
+    <script src="js/vendor/jquery-3.2.1.min.js"></script>
+    <!-- own style-->
+    <link rel="stylesheet" href="css/delivery.css">
+  </head>
+  <body>
+    <div class="trans_bg">
+      <div class="trans_ipad">
+        <div class="trans_center"><img src="img/ipad_ok_landscape.png">                
+          <p>請將裝置轉至直式<br>體驗最佳瀏覽方式</p>
+        </div>
+      </div>
+      <div class="trans_iphone">
+        <div class="trans_center"><img src="img/iphone_ok.png">                
+          <p>請將裝置轉至直式<br>體驗最佳瀏覽方式</p>
+        </div>
+      </div>
+    </div>
+    <!-- header-->
+    <div class="lightbox" style="display:none;">
+      <div class="lightbox_outter"><a class="btn-lightbox" href="#"><span class="icon-close"> </span></a>
+        <div class="main main-delivery">
+          <h2><span class="icon-tt-notice"></span></h2>
+          <div class="txt">
+            <p>若確定兌換後系統即認定此筆兌換已執行，將無法取消、更換其他好禮或退回點數，亦不可變更配送資訊！</p>
+          </div>
+          <div class="btnBox"><a class="btn-gift" href="#"><span>取消</span></a><a class="btn-gift" href="succeed.html"><span>確定</span></a></div>
+        </div>
+      </div>
+    </div>
+    <header><a class="logo" href="index.html"> <img src="asset/svg/logo.svg" alt="logo"></a>
+      <div class="navBox">
+        <!-- pointBox-->
+        <div class="memberInfo"><a class="logout" href="#">登出</a><span> / </span>
+          <div class="pointBox"><span>目前點數</span><span class="number">999,299</span></div>
+        </div>
+        <!-- bur-->
+        <div class="burBox"><a class="bur" href="#"><span></span></a><script  src="js/vendor/bur.js"></script></div>
+        <!-- PC menu -->
+        <nav>
+          <ul>
+            <li><a href="index.html">活動首頁</a>
+            </li>
+            <li><a href="addpoint.html">點數登錄/查詢</a>
+            </li>
+            <li><a href="gift.html">兌換好禮</a>
+            </li>
+            <li><a href="rule.html">活動辦法</a>
+            </li>
+            <li><a href="privacy.html">隱私權 </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- M Menu-->
+    <div class="menuBox" style="display:none;">
+      <div class="inner">
+        <ul>
+          <li><a class="active" href="index.html">活動首頁</a>
+          </li>
+          <li><a href="activity.html">點數登錄/查詢</a>
+          </li>
+          <li><a href="gift.html">兌換好禮</a>
+          </li>
+          <li><a href="rule.html">活動辦法</a>
+          </li>
+          <li><a href="privacy.html">隱私權</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- content-->
+    <div class="wrap">
+      <div class="main">
+        <div class="tt"><span class="icon-tt_gift"></span></div>
+        <p class="sub">
+          已選擇兌換 可口可樂® 食尚沙拉罐 1個，<br>請詳填以下收件資料後點選<span class="bold">確認送出</span>，<br>
+          以完成兌換。<br>
+        </p>
+        <div class="form">
+          <ul>
+            <li class="warn">
+              <label>收件人</label><a class="del_pos"><span class="icon-del"></span></a>
+              <input id="user-name" type="text" maxlength="5" placeholder="請填寫真實姓名">
+            </li> 
+            <li>
+              <label>電話</label><a class="del_pos"><span class="icon-del"></span></a>
+              <input id="user-mobile" type="tel" maxlength="15" placeholder="請填寫家用電話或手機號碼">
+            </li> 
+            <li>
+              <label>收件地址</label>                            
+              <div class="selectStyle selectAdd">
+                <ul>
+                  <li class="selectBox">
+                    <select>
+                      <option value="0">請選擇縣市</option>
+                      <option value="1">台北市</option>
+                      <option value="2">新北市        </option>
+                    </select>
+                  </li> 
+                  <li class="selectBox">
+                    <select>
+                      <option value="0">請選擇區域</option>
+                      <option value="1">信義區</option>
+                      <option value="2">大安區</option>
+                    </select>
+                  </li>
+                </ul>
+              </div><a class="del_pos"><span class="icon-del"></span></a>
+              <input class="add" id="user-add" type="text" maxlength="30" placeholder="請填寫收件街道地址">
+              <p> <span>※ </span><span>為避免好禮無法正確配送，請勿填寫郵政信箱</span></p>
+            </li>
+          </ul>
+        </div> <a class="r_bg" href="succeed.html"> <span>確認送出</span></a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+extends ./include/layout
+block own_style
+    link(rel = 'stylesheet', href = 'css/notice.css')
+block content
+  .wrap
+    .container
+      .main.succeed
+        .tt <span class="icon-tt_succeed"></span>
+        h3.sub_tt 兌換說明
+        p.txt 已完成兌換程序之食尚好禮將分二梯次進行配送：
+        p.txt 第一梯次：2017/02/28前(含)完成兌換，預計於2017/03/01開始寄送。
+        p.txt 第二梯次：2017/04/18前(含)完成兌換，預計於2017/04/19開始寄送。 
+        p.txt 如有兌換或寄送問題，請洽活動專線(02)25025020，服務時間週一至週五09:00~18:00(不含例假日)。
+        .btn_sBox
+          a.r_line.btn_s(href="gift.html") 
+            span 兌換更多
+          a.r_line.btn_s(href="addpoint.html") 
+            span 兌換記錄
+        a.r_bg(href="#") 
+          span 完成
+
+    
+

@@ -1,0 +1,34 @@
+@import "compass/css3";
+@import "color";
+// mixin
+@import "mixin";
+@import "typography";
+.wrap {
+    .main {
+        .form {
+            input.add {
+                margin-left: 130px;
+                margin-top: 10px;
+                @media only screen and (max-width: 767px) {
+                    margin-left:70px;
+                }
+            }
+            p {
+                color: $coke;
+                margin: 10px 0;
+                display: flex;
+                align-items: flex-start;
+                span {
+                    &:first-child {
+                        margin-right: 5px;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+}
+.btn-gift{
+	width: 50%;
+}
+

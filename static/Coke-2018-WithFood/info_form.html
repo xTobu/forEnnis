@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http - equiv="x-ua-compatible" content="ie=edge">
+    <title>Coca-cola 食尚餐廚集點送</title>
+    <!-- facebook share-->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="#{pagetitle}">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:site_name" content="可口可樂®">
+    <meta property="og:url" content="https://www.coca-cola.com.tw/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon-->
+    <link rel="icon" href="img/favicon.ico">
+    <!-- css style-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--if gt IE 9-->
+    <script src="js/vendor/html5shiv.js"></script>
+    <script src="js/vendor/jquery-3.2.1.min.js"></script>
+    <!-- own style-->
+    <link rel="stylesheet" href="css/account.css">
+  </head>
+  <body>
+    <div class="trans_bg">
+      <div class="trans_ipad">
+        <div class="trans_center"><img src="img/ipad_ok_landscape.png">                
+          <p>請將裝置轉至直式<br>體驗最佳瀏覽方式</p>
+        </div>
+      </div>
+      <div class="trans_iphone">
+        <div class="trans_center"><img src="img/iphone_ok.png">                
+          <p>請將裝置轉至直式<br>體驗最佳瀏覽方式</p>
+        </div>
+      </div>
+    </div>
+    <!-- header-->
+    <div class="lightbox" style="display: none;">
+      <div class="lightbox_outter"><a class="btn-lightbox" href="#"><span class="icon-close"> </span></a>
+        <div class="main">
+          <h2><span class="icon-tt-oops"></span></h2>                
+          <p>很抱歉，您目前不符合<br>本活動之參與資格!</p>
+          <p style="display: none;">請確認您已同意本活動隱私權政策</p>
+        </div>
+      </div>
+    </div>
+    <header><a class="logo" href="index.html"> <img src="asset/svg/logo.svg" alt="logo"></a>
+      <div class="navBox">
+        <!-- pointBox-->
+        <!-- bur-->
+        <div class="burBox"><a class="bur" href="#"><span></span></a><script  src="js/vendor/bur.js"></script></div>
+        <!-- PC menu -->
+        <nav>
+          <ul>
+            <li><a href="index.html">活動首頁</a>
+            </li>
+            <li><a href="addpoint.html">點數登錄/查詢</a>
+            </li>
+            <li><a href="gift.html">兌換好禮</a>
+            </li>
+            <li><a href="rule.html">活動辦法</a>
+            </li>
+            <li><a href="privacy.html">隱私權 </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- M Menu-->
+    <div class="menuBox" style="display:none;">
+      <div class="inner">
+        <ul>
+          <li><a class="active" href="index.html">活動首頁</a>
+          </li>
+          <li><a href="activity.html">點數登錄/查詢</a>
+          </li>
+          <li><a href="gift.html">兌換好禮</a>
+          </li>
+          <li><a href="rule.html">活動辦法</a>
+          </li>
+          <li><a href="privacy.html">隱私權</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- content-->
+    <div class="wrap">
+      <div class="main">
+        <div class="tt">
+           <span class="icon-tt_form"></span></div>
+        <p class="sub">請填入正確資訊</p>
+        <!-- form-->
+        <div class="form">
+          <ul>
+            <li>
+              <label>姓名</label><a class="del_pos" style="display: none;"><span class="icon-del"></span></a>
+              <input class="warn" id="user-name" type="text" maxlength="5" placeholder="請填寫真實姓名">
+            </li> 
+            <li>
+              <label>E-mail</label><a class="del_pos" style="display: none;"><span class="icon-del"></span></a>
+              <input id="user-email" type="email" maxlength="50" placeholder="避免使用易漏信之免費信箱">
+            </li>                         
+            <li class="bdBox">
+              <label>生日</label>                            
+              <div class="selectStyle">
+                <ul>
+                  <li class="selectBox year">
+                    <select class="year">
+                      <option value="0">YYYY</option>
+                      <option value="1">2016</option>
+                      <option value="2">2015</option>
+                    </select>
+                  </li>                                    
+                  <li>年</li>                                    
+                  <li class="selectBox">
+                    <select>
+                      <option value="0">MM</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                    </select>
+                  </li>                                    
+                  <li>月</li>                                    
+                  <li class="selectBox">
+                    <select>
+                      <option value="0">DD</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="16">16</option>
+                      <option value="17">17</option>
+                      <option value="18">18</option>
+                      <option value="19">19</option>
+                      <option value="20">20</option>
+                      <option value="21">21</option>
+                      <option value="22">22</option>
+                      <option value="23">23</option>
+                      <option value="24">24</option>
+                      <option value="25">25</option>
+                      <option value="26">26</option>
+                      <option value="27">27</option>
+                      <option value="28">28</option>
+                      <option value="29">29</option>
+                      <option value="30">30</option>
+                      <option value="30">31</option>
+                    </select>
+                  </li>                                    
+                  <li>日</li>
+                </ul>
+              </div>
+            </li> 
+            <li>
+              <label>設定密碼</label><a class="del_pos" style="display: none;"><span class="icon-del"></span></a>
+              <input id="password" type="password" maxlength="12" placeholder="請輸入您的密碼">
+            </li> 
+            <li>
+              <label>確認密碼</label><a class="del_pos" style="display: none;"><span class="icon-del"></span></a>
+              <input id="password" type="password" maxlength="12" placeholder="請再次輸入您的密碼">
+            </li> 
+            <li class="check_area">
+              <div class="checkbox">
+                <input id="checkboxInput" type="checkbox" value="1" name="">                                
+                <label for="checkboxInput"></label>
+              </div>                            
+              <p>我已詳閱並同意本活動<a href="privacy.html" target="_blank">隱私權政策</a></p>
+            </li>                        
+            <li class="check_area">
+              <div class="checkbox">
+                <input id="checkboxInput" type="checkbox" value="1" name="">                                
+                <label for="checkboxInput"></label>
+              </div>                            
+              <p>同意提供個資作中獎公告與聯繫使用</p>
+            </li> 
+            <li class="robotBox"><span class="robot">
+                <div id="recaptcha_container">
+                  <div class="g-recaptcha" id="reCaptchaBox" data-sitekey=""></div>
+                </div></span></li>
+          </ul>
+        </div><a class="r_bg" href="addpoint.html"> <span>確認送出</span></a>
+      </div>
+    </div>
+  </body>
+</html>

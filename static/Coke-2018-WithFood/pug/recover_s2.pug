@@ -1,0 +1,13 @@
+extends ./include/layout
+block own_style
+	link(rel = 'stylesheet', href = 'css/account.css')
+block pointBox
+block content
+	.wrap.h100
+		.main
+			.tt <span class="icon-tt_fg_pw"></span>
+			p.sub 重設密碼認證信已寄至您的信箱，請點擊信件內認證網址後重設密碼！若尚未收到認證信，請重新檢查信箱之垃圾信件匣或重新寄送認證信。
+			// btn
+			a.r_bg.recover(href="recover_s3.html") 
+				span 再次寄送重設密碼認證信
+	    

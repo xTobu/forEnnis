@@ -1,0 +1,200 @@
+.txt {
+  text-align: justify;
+  text-justify: inter-ideographic; }
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+.sub_tt, .step span:first-child {
+  font-weight: 600; }
+
+.succeed {
+  font-size: 1.5rem; }
+  .succeed .btn_sBox {
+    margin-top: 70px; }
+    .succeed .btn_sBox .btn_s {
+      margin-bottom: 0; }
+      .succeed .btn_sBox .btn_s:first-child {
+        margin-right: 2%; }
+  .succeed li {
+    padding-left: 20px; }
+    .succeed li:before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 100%;
+      background: #e0061c;
+      left: 3px;
+      top: 8px;
+      display: inline-block;
+      position: absolute; }
+
+.txt {
+  margin-bottom: 20px; }
+  .txt a {
+    color: #222222;
+    text-decoration: underline; }
+
+.sub_tt {
+  color: #e0061c;
+  margin-bottom: 10px;
+  text-align: left; }
+
+section {
+  text-align: left;
+  margin: 20px 0;
+  font-size: 1.5rem; }
+  section li {
+    position: relative;
+    font-size: 1.5rem; }
+    section li span {
+      display: block; }
+    section li .txt a {
+      color: #e0061c;
+      text-decoration: none; }
+
+.notice section ul li {
+  list-style-type: decimal;
+  margin-left: 25px;
+  margin-top: 20px; }
+.notice section .flow {
+  margin-bottom: 60px;
+  position: relative; }
+  .notice section .flow:not(:last-child) .iconBox:after {
+    content: url(../asset/svg/arrow.svg);
+    width: 20px;
+    display: inline-block;
+    position: absolute;
+    bottom: -42px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%); }
+  .notice section .flow:nth-child(2) {
+    margin-top: 20px; }
+
+.iconBox {
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  background: white;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  margin-right: 30px; }
+  @media only screen and (max-width: 413px) {
+    .iconBox {
+      width: 80px;
+      height: 80px;
+      margin-right: 19px; } }
+  @media only screen and (max-width: 374px) {
+    .iconBox {
+      width: 60px;
+      height: 60px;
+      margin-right: 10px; } }
+
+@media only screen and (max-width: 413px) {
+  .icon {
+    -webkit-transform: translate(-50%, -50%) scale(0.8);
+    transform: translate(-50%, -50%) scale(0.8); } }
+@media only screen and (max-width: 374px) {
+  .icon {
+    -webkit-transform: translate(-50%, -50%) scale(0.6);
+    transform: translate(-50%, -50%) scale(0.6); } }
+
+.step {
+  display: inline-block;
+  font-size: 1.5rem;
+  vertical-align: middle;
+  padding-right: 5px; }
+  @media only screen and (max-width: 374px) {
+    .step {
+      font-size: 1.4rem; } }
+  .step span {
+    display: block;
+    text-align: left; }
+    .step span:first-child {
+      color: #e0061c; }
+
+.icon1 {
+  width: 20px; }
+
+.icon2 {
+  width: 55px; }
+
+.icon3 {
+  width: 60px; }
+
+.icon4 {
+  width: 50px; }
+
+.icon5 {
+  width: 55px; }
+
+.product {
+  margin-bottom: 20px;
+  padding-bottom: 20px; }
+
+.img {
+  margin: auto; }
+
+.p1, .p2 {
+  width: 150px; }
+
+.p3 {
+  width: 300px; }
+
+.p4 {
+  width: 60px; }
+
+.p5 {
+  width: 150px; }
+
+.p6 {
+  width: 300px; }
+
+.p7 {
+  width: 300px; }
+
+.pro_pic {
+  margin: 20px auto; }
+  @media only screen and (max-width: 374px) {
+    .pro_pic {
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8); } }
+
+.pot {
+  width: 235px; }
+
+.bowl {
+  width: 245px; }
+
+.pot-s {
+  text-align: right;
+  width: 300px; }
+  @media only screen and (max-width: 767px) {
+    .pot-s {
+      width: 270px; } }
+  .pot-s img {
+    width: 80%;
+    display: inline; }
+    @media only screen and (max-width: 767px) {
+      .pot-s img {
+        width: 82%; } }
+    @media only screen and (max-width: 374px) {
+      .pot-s img {
+        width: 95%; } }
+
+.salad {
+  width: 220px;
+  padding-right: 30px; }
+
+
+
+/*# sourceMappingURL=notice.css.map */

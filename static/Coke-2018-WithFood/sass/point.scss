@@ -1,0 +1,70 @@
+@import "compass/css3";
+@import "color";
+// mixin
+@import "mixin";
+@import "typography";
+body {
+    height: auto;
+}
+
+.form {
+    li {
+        &:after {
+            width: 100%;
+        }
+    }
+    p {
+        width: 100%;
+        text-align: center;
+    }
+    .error_pos,
+    .checked {
+        font-size: 2rem;
+        right: 6px;
+        bottom: 8px;
+    }
+    .checked {}
+}
+
+.form input[type=text].number,
+.form input[type=email].number,
+.form input[type=tel].number,
+.form input[type=password].number {
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.result {
+    margin: 50px 0 20px;
+    p {
+        font-size: 1.3rem;
+        span {
+            font-size: 2rem;
+            color: $coke;
+        }
+    }
+}
+
+.add_btn {
+    color: $gray;
+    margin: 20px auto;
+    span {
+        font-size: 2.5rem;
+        display: inline-block;
+        vertical-align: middle;
+        &:last-child {
+            font-size: 1.3rem;
+            margin-left: 10px;
+        }
+    }
+}
+
+.wrap {
+    .bonus {
+        padding-top: 15px;
+    }
+}
+
+.coupon {
+    margin: 20px auto;
+}

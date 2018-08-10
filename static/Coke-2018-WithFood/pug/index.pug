@@ -1,0 +1,54 @@
+extends ./include/layout
+include ./include/mixin
+block own_style
+	link(rel = 'stylesheet', href = 'css/index.css')
+//- block index
+//-     a.active 活動首頁
+block pointBox
+block logo
+	img(src="asset/svg/logo_w.svg", alt="logo")
+block outside
+	.announcement(style="display:none")
+		.inner
+			.content
+				a.logo(href="#")
+					+svg('logo_w')
+				.ttBox
+					+svg('tt')
+				.pot
+					+img('pot')
+			.cir-bg
+				p 2018/1/10 開跑，敬請期待
+				.inner
+					span
+block content
+	// main
+	.outer
+		.wrap
+			.container
+				.tt
+					img(src="asset/svg/tt.svg", alt="")
+				.probox
+					ul
+						+product('x 大同 ','pot.html','pot.png','限量聯名電鍋')
+						|
+						+product(null,'bowl.html','bowl.png','沙拉木碗組')
+						|
+						+product(null,'pot-s.html','pot-s.png','食尚小湯鍋')
+						|
+						+product(null,'salad.html','salad.png','食尚沙拉罐')
+				p 登錄指定包裝序號，
+					span.break_m 多項Coke好禮集點帶回家！
+				a.btn(href="signin.html")
+					span.icon-btn-pot
+					span 集點換好禮
+			.arrowbox
+				a.left(href="#")
+					span.icon-arrow
+				a.right(href="#")
+					span.icon-arrow
+		.cir-bg
+
+
+
+		

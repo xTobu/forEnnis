@@ -1,0 +1,44 @@
+extends ./include/layout
+block own_style
+    link(rel = 'stylesheet', href = 'css/point.css')
+block content
+  .wrap
+    .container
+      .main
+        .tt <span class="icon-tt_check"></span>
+        // form
+        .form
+          ul
+            li
+              a.del_pos.checked
+               <span class="icon-check"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+              input.number(type='text', maxlength='10', placeholder='請填入大寫英數序號共10碼')
+            li.warn
+              a.del_pos.error_pos
+                <span class="icon-error"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+              input.number.warn(type='text', maxlength='10', placeholder='請填入大寫英數序號共10碼')
+              p.warn 無此序號 
+            li.warn
+              a.del_pos.error_pos
+                <span class="icon-error"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+              input.number.warn(type='text', maxlength='10', placeholder='請填入大寫英數序號共10碼')
+              p.warn 序號已使用 
+        .result
+          p 成功累積<span> 1 </span>點<br>目前累積總點數<span> 1,300 </span>點
+        //  btn
+        a.r_bg(href="gift.html") 
+          span 兌換好禮
+        .btnBox
+          a.r_line.btn_s(href="addpoint.html") 
+            span 輸入更多
+          a.r_line.btn_s(href="#") 
+            span 兌換記錄
+      // coupon
+      .main.bonus
+        .tt <span class="icon-tt_bonus"></span>
+        .coupon
+          img(src="img/coupon.png", alt="")
+        a.r_bg(href="#") 
+          span 儲存圖片
+
+    

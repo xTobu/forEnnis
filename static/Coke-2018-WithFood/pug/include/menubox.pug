@@ -1,0 +1,32 @@
+mixin navLink(href, name)
+  //- attributes == {class: "btn"}
+  a(class!=attributes.class href=href)= name
+
+.menuBox(style="display:none")
+  .inner
+    ul
+      li
+        +navLink('index.html','活動首頁')(class="active")
+      li
+        +navLink('activity.html','點數登錄/查詢')
+      li
+        +navLink('gift.html','兌換好禮')
+      li
+        +navLink('rule.html','活動辦法')
+      li
+        +navLink('privacy.html','隱私權')
+    
+    
+    
+    
+  //- ul
+  //-   li
+  //-     a(href="index.html") 活動首頁
+  //-   li
+  //-     a(href="activity.html") 點數登錄/查詢
+  //-   li
+  //-     a(href="gift.html") 兌換好禮
+  //-   li
+  //-     a(href="rule.html") 活動辦法
+  //-   li
+  //-     a 隱私權
