@@ -20,6 +20,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~assets/sass/index.scss';
+@import "~assets/sass/index.scss";
 </style>
 
