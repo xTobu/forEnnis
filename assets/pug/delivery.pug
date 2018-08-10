@@ -1,0 +1,66 @@
+extends ./include/layout
+block own_style
+    link(rel = 'stylesheet', href = 'css/delivery.css')
+block outside
+  .lightbox(style="display:none")
+    .lightbox_outter
+      a.btn-lightbox(href="#")
+              span.icon-close 
+      .main.main-delivery
+        h2
+          span.icon-tt-notice
+        .txt
+          p 若確定兌換後系統即認定此筆兌換已執行，將無法取消、更換其他好禮或退回點數，亦不可變更配送資訊！
+        .btnBox
+          a.btn-gift(href="#")
+            span 取消
+          a.btn-gift(href="succeed.html")
+            span 確定
+block content
+  .wrap
+    .main
+        .tt <span class="icon-tt_gift"></span>
+        p.sub 已選擇兌換 可口可樂® 食尚沙拉罐 1個，<br>
+          | 請詳填以下收件資料後點選
+          span.bold 確認送出
+          |，<br>
+          | 以完成兌換。<br>
+        .form
+          ul
+            li.warn
+              label 收件人
+              a.del_pos
+                span.icon-del
+              input#user-name(type='text', maxlength='5', placeholder='請填寫真實姓名')
+            | 
+            li
+              label 電話
+              a.del_pos
+                span.icon-del
+              input#user-mobile(type='tel', maxlength='15', placeholder='請填寫家用電話或手機號碼')
+            | 
+            li
+              label 收件地址
+              |                             
+              .selectStyle.selectAdd
+                ul
+                  li.selectBox
+                    select
+                      option(value='0') 請選擇縣市
+                      option(value='1') 台北市
+                      option(value='2') 新北市        
+                  | 
+                  li.selectBox
+                    select
+                      option(value='0') 請選擇區域
+                      option(value='1') 信義區
+                      option(value='2') 大安區
+              a.del_pos
+                span.icon-del
+              input.add#user-add(type='text', maxlength='30', placeholder='請填寫收件街道地址')
+              p 
+                span ※ 
+                span 為避免好禮無法正確配送，請勿填寫郵政信箱
+        | 
+        a.r_bg(href="succeed.html") 
+          span 確認送出

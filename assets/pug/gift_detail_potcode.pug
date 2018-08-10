@@ -1,0 +1,50 @@
+extends ./include/layout
+block own_style
+    link(rel = 'stylesheet', href = 'css/gift.css')
+block outside
+  // confirm 
+  .lightbox(style="display:none")
+    .lightbox_outter
+      a.btn-lightbox(href="#")
+              span.icon-close 
+      .main.main-exchange
+        h2
+          span.icon-tt-confirm
+        .txt
+          p 以 
+            span.cost
+              span.red $1,968
+              span.plus +
+              span.red 250
+              span  點
+            | 兌換
+          p
+            span.red  可口可樂® x 大同聯名電鍋
+            |  乙個
+block content
+  .wrap
+    .main
+      .tt <span class="icon-tt_gift_pot"></span>
+      p.sub 請憑下方結帳代碼至e同購完成兌換流程
+      .giftBox 
+        .content
+          .giftItem.giftItem-detail
+            .img
+              img(src="img/pot.png", alt="")
+            p
+              span.icon-pos
+                span.icon-coke
+              |
+              |
+              span  X 大同
+              |
+              |
+              span 聯名電鍋
+          .codeBox
+            p 您的e同購結帳代碼
+            p.code CPXXXXXX
+          p.ps 選擇「500點免費兌換」或是「250點加價購」皆需至 e 同購網站「可口可樂 x 大同」聯名電鍋商品頁面輸入結帳代碼並進行商品結帳及完成寄送資料填寫(需註冊/登入e同購會員)，聯名電鍋將於2018/02/05開放門市取貨或指定地點配送。若未於2018/04/11前至e同購完成商品下單結帳，將視同自動放棄兌換此好禮的權利，已使用的點數無法退回亦無法更換其他好禮。
+      a.r_bg(href="#") 
+        span 前往 e 同購
+      a.r_line.btn_gift(href="#") 
+        span 兌換紀錄

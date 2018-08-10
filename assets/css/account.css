@@ -1,0 +1,46 @@
+@media only screen and (max-height: 800px) {
+  body {
+    height: auto; } }
+
+.or {
+  color: #888888;
+  font-size: 1.3rem; }
+
+.form {
+  margin-top: -15px; }
+
+.signBox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 10px; }
+  @media only screen and (max-width: 374px) {
+    .signBox {
+      margin-top: 0; } }
+  .signBox a {
+    color: #888888;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    display: inline-block;
+    position: relative; }
+    .signBox a:after {
+      content: "";
+      width: 0;
+      height: 1px;
+      background: #888888;
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      -webkit-transition: width .3s ease;
+      transition: width .3s ease; }
+    @media only screen and (min-width: 1025px) {
+      .signBox a:hover:after {
+        width: 100%; } }
+
+
+
+/*# sourceMappingURL=account.css.map */

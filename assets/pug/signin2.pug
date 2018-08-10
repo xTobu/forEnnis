@@ -1,0 +1,28 @@
+extends ./include/layout
+block own_style
+    link(rel = 'stylesheet', href = 'css/account.css')
+block pointBox
+block content
+  .wrap.h100
+    .main
+        .tt.tt_s <span class="icon-tt_rs_pw_done"></span>
+        p.sub 請以新密碼重新登入
+        // form
+        .form
+          ul
+            li
+              label E-mail
+              a.del_pos(style="display:none")
+                span.icon-delete
+              input#user-email.warn(type='email', maxlength='50', placeholder='請輸入您的E-mail信箱')
+            li
+              label 密碼
+              a.del_pos(style="display:none")
+                span.icon-delete
+              input#password(type='password', maxlength='8', placeholder='請輸入您的密碼')
+            p.warn(style="display:none") 帳號和密碼不符，請重新輸入
+        // login btn
+        a.r_bg(href="addpoint.html") 
+          span 登入
+
+    

@@ -1,0 +1,20 @@
+extends ./include/layout
+block own_style
+    link(rel = 'stylesheet', href = 'css/account.css')
+block pointBox
+block content
+  .wrap
+    .main
+        .tt 
+          <span class="icon-tt_signup"></span>
+        p.sub 您好，感謝您參加本集點活動，請先選擇登入方式作為日後累積點數及兌換之帳號，請注意 Facebook 及 E-mail 帳號登入將為 2 個不同帳號，不同帳號所累積之點數亦無法合併計算！
+        // other btn
+        a.btn-fb(href="#")
+            <span class="icon-fb"></span>
+            span 登入
+        p.or 或
+        // login btn
+        a.r_bg(href="info_form.html") 
+          span E-mail 登入
+      
+

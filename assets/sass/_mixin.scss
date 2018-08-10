@@ -1,0 +1,168 @@
+// all mixins.
+@mixin btn($bg, $hover, $color, $h-color) {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50px;
+    background: $bg;
+    color: $color;
+    font-size: 1.6rem;
+    margin: 10px auto;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    overflow: hidden;
+    @extend %fw_b;
+    box-sizing: content-box;
+    @media only screen and (max-width: 374px) {
+        height: 45px;
+        line-height: 45px;
+        border-radius: 45px;
+    }
+    span {
+        @extend %fw_m;
+    }
+    &:after {
+        position: absolute;
+        transition: .3s;
+        content: '';
+        width: 0;
+        left: 50%;
+        bottom: 0;
+        height: 3px;
+        background: $hover;
+        height: 120%;
+        left: -10%;
+        transform: skewX(15deg);
+        z-index: -1;
+    }
+    &:hover {
+        @media screen and (min-width: 1025px) {
+            color: $h-color;
+            &:after {
+                left: -10%;
+                width: 120%;
+            }
+        }
+    }
+}
+
+%all-100 {
+    width: 100%;
+    height: 100%;
+}
+
+%txt_justify {
+    text-align: justify;
+    text-justify: inter-ideographic;
+}
+
+%center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include translate(-50%, -50%);
+}
+
+%pos-mid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include translate(-50%,
+    -50%);
+}
+
+%flex-mid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// flex box mid
+@mixin flex-mid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// flex row
+@mixin flex-r-row {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+// img size
+@mixin img_size($image) {
+    width: image-width("../img/#{$image}");
+    height: image-height("../img/#{$image}");
+    background: url("../img/#{$image}") no-repeat;
+}
+
+$box_w: 100%;
+$box_h: auto;
+@mixin box-size($box_w,
+$box_h) {
+    width: $box_w;
+    height: $box_h;
+}
+
+// imgscalable
+@mixin img-scalable {
+    >img {
+        @include box(100%,
+        auto);
+        display: block;
+    }
+}
+
+// circle
+@mixin cir($unit) {
+    width: $unit;
+    height: $unit;
+    border-radius: 100%;
+}
+
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+
+@mixin pos-mid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include translate(-50%,
+    -50%);
+}
+
+// full-screen
+@mixin full-screen {
+    width: 100%;
+    min-height: 100%;
+}
+
+// clearboth
+@mixin clear {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+// vertical align
+@mixin v-align($h) {
+    &:after {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 0;
+        height: $h;
+    }
+}

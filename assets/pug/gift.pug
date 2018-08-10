@@ -1,0 +1,87 @@
+extends ./include/layout
+include ./include/mixin
+block own_style
+    link(rel = 'stylesheet', href = 'css/gift.css')
+block prepend beforeBody
+  - bodyClasses= 'h100'
+  //- - bodyClasses.push('h100')
+block gift
+    a.active 兌換好禮
+block pointBox
+  a.pointBox.recordBox(href="#") 兌換記錄
+block outside
+  //exchange record
+  .lightbox.lightbox-record(style="display:none")
+    .lightbox_outter
+      a.btn-lightbox(href="#")
+              span.icon-close 
+      .main
+        h2
+          span.icon-tt_record
+        .detail
+          ul
+            li
+              span.date 2/23
+              span.item 兌換 可口可樂® 沙拉木碗組 乙組
+            li
+              span.date 2/23
+              span.item 兌換 可口可樂® x 大同聯名電鍋 乙個
+              span.code e同購結帳代碼：CPXXXXXX
+block content
+  .wrap
+    .main.gift
+      .tt <span class="icon-tt_gift"></span>
+      p.sub 可口可樂®限量食尚餐廚系列，<br>累積足夠點數立即換！
+      .arrowbox
+        a.left(href="#")
+          span.icon-arrow
+        a.right(href="#")
+          span.icon-arrow
+      .giftItem
+          p
+            span.icon-pos
+              span.icon-coke
+            |
+            |
+            span  X 大同
+            |
+            |
+            span 聯名電鍋
+          p.limit 限量 1,000 個
+          a.r_line.btn_info(href="gift_detail.html") 好禮內容
+          .img
+            img(src="img/pot.png", alt="")
+      .giftItem(style="display:none")
+          p
+            span.icon-pos
+              span.icon-coke
+            |
+            |
+            span 沙拉木碗組
+          p.limit 限量 1,500 個
+          a.r_line.btn_info(href="#") 好禮內容
+          .img.bowl
+            img(src="img/bowl.png", alt="")
+      .giftItem(style="display:none")
+          p
+            span.icon-pos
+              span.icon-coke
+            |
+            |
+            span 食尚小湯鍋
+          p.limit 限量 2,000 個
+          a.r_line.btn_info(href="#") 好禮內容
+          .img.pot-s
+            img(src="img/pot-s.png", alt="")
+      .giftItem(style="display:none")
+          p
+            span.icon-pos
+              span.icon-coke
+            |
+            |
+            span 食尚沙拉罐
+          p.limit 限量 3,000 個
+          a.r_line.btn_info(href="#") 好禮內容
+          .img.salad
+            img(src="img/salad.png", alt="")
+    .cir-bg

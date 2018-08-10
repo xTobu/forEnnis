@@ -1,0 +1,408 @@
+// form input style.
+$input_height:50px;
+$input_height_s:45px;
+$checkbox_size:1.5rem;
+$checkbox_p:2rem;
+$checkbox_m:30px;
+$checkbox_s:30px;
+$input_color:#4a4a4a;
+$label_color:$gray;
+$border_color:$l-gray;
+input,
+button,
+select,
+textarea {
+    outline: none
+}
+
+*:focus {
+    outline: none;
+}
+
+.form {
+    width: 100%;
+    color: $gray;
+    p {
+        margin-top: -5px;
+        font-size: 1.3rem;
+        @extend %fw_r;
+        width: calc(100% - 130px);
+        float: right;
+        @include clear;
+        text-align: left;
+        margin-bottom: 10px;
+        @media only screen and (max-width: 767px) {
+            width: calc(100% - 70px);
+        }
+        @media only screen and (max-width: 374px) {
+            margin-top: -2px;
+        }
+        &.warn {
+            color: $coke;
+            margin: 10px 0;
+        }
+    }
+
+    li {
+        display: block;
+        font-size: 0;
+        margin: 15px 0;
+        position: relative;
+        text-align: left;
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+            margin: 20px 0;
+        }
+        @media only screen and (max-width: 374px) {
+            margin: 10px 0;
+        }
+        &:after {
+            content: "";
+            width: calc(100% - 130px);
+            height: 1px;
+            background-color: #979797;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            @media only screen and (max-width: 767px) {
+                width: calc(100% - 70px);
+            }
+        }
+        &.warn {
+            &:after {
+                background-color: $coke;
+            }
+        }
+    }
+    .del_pos {
+        position: absolute;
+        right: 10px;
+        bottom: 15px;
+        color: $coke;
+        cursor: pointer;
+        font-size: 1rem;
+        z-index: 2;
+    }
+    label {
+        margin-right: 70px;
+        display: inline-block;
+        text-align: left;
+        width: 60px;
+        font-size: 1.3rem;
+        line-height: $input_height;
+        vertical-align: top;
+        color: $label_color;
+        @extend %fw_r;
+        @media only screen and (max-width: 767px) {
+            margin-right: 10px;
+        }
+        @media only screen and (max-width: 374px) {
+            line-height: $input_height_s;
+        }
+    }
+    input[type=text],
+    input[type=email],
+    input[type=tel],
+    input[type=password] {
+        height: $input_height;
+        width: calc(100% - 130px);
+        border: 0;
+        text-align: left;
+        background: transparent;
+        @include box-shadow(transparent, 0);
+        font-size: 1.4rem;
+        color: $input_color;
+        display: inline-block;
+        -webkit-appearance: none;
+        position: relative;
+        @media only screen and (max-width: 767px) {
+            width: calc(100% - 70px);
+        }
+        @media only screen and (max-width: 374px) {
+            height: $input_height_s;
+        }
+
+        &.number {
+            width: 100%;
+        }
+    }
+
+    .robot {
+        width: 100%;
+        height: $input_height;
+        background-color: $robot;
+        @include border-radius($input_height);
+        display: block;
+        border: solid 1px #979797;
+        margin-top: 20px;
+        overflow: hidden;
+        @media only screen and (max-width: 374px) {
+            height: $input_height_s;
+        }
+    }
+    .checkbox {
+        width: $checkbox_m;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        height: $checkbox_m;
+        @media only screen and (max-device-width: 374px) and (orientation: portrait) {
+            width: $checkbox_s;
+            height: $checkbox_s;
+        }
+
+        input[type=checkbox] {
+            visibility: hidden;
+            width: $checkbox_m;
+            height: $checkbox_m;
+            @media only screen and (max-device-width: 374px) and (orientation: portrait) {
+                width: $checkbox_s;
+                height: $checkbox_s;
+            }
+        }
+        label {
+            cursor: pointer;
+            position: absolute;
+            width: $checkbox_m;
+            height: $checkbox_m;
+            top: 0;
+            left: 0;
+            @include border-radius(5px);
+            border: solid 1px #888888;
+            @media only screen and (max-device-width: 374px) {
+                width: $checkbox_s;
+                height: $checkbox_s;
+            }
+            &:after {
+                @include opacity(0.1);
+                content: '';
+                position: absolute;
+                width: 13px;
+                height: 7px;
+                background: transparent;
+                top: 6px;
+                left: 6px;
+                border: 3px solid red;
+                border-top: none;
+                border-right: none;
+                @include transform(rotate(-45deg));
+                @media only screen and (max-device-width: 767px) {
+                    top: 8px;
+                    left: 6px;
+                }
+            }
+            &:hover:after {
+                @include opacity(0.5);
+            }
+        }
+    }
+    .checkbox input[type=checkbox]:checked+label:after {
+        @include opacity(1);
+    }
+    .check_area {
+        text-align: left;
+        margin-top: 15px;
+
+        a {
+            display: inline-block;
+            text-decoration: underline;
+            color: $gray;
+            padding-left: 3px;
+        }
+        p {
+            width: calc(100% - 50px);
+            padding-left: 0;
+            vertical-align: middle;
+            display: inline-block;
+            line-height: $checkbox_m;
+            margin-top: 0;
+            margin-bottom: 0;
+            @media only screen and (max-width: 374px) {
+                width: calc(100% - 40px);
+                line-height: $checkbox_s;
+            }
+        }
+    }
+    .bdBox,
+    .check_area,
+    .robotBox {
+        &:after {
+            height: 0;
+            width: 0;
+        }
+    }
+    .selectStyle {
+        display: inline-block;
+        width: calc(100% - 130px);
+        @media only screen and (max-width: 736px) {
+            width: 74%;
+        }
+
+        li {
+            display: inline-block;
+            margin: 0;
+            margin-right: 5px;
+            font-size: 1.4rem;
+            color: $gray;
+            height: $input_height;
+            line-height: $input_height;
+            vertical-align: middle;
+            &:after {
+                width: 0;
+                height: 0;
+            }
+            &.selectBox {
+                width: 23%;
+                @media only screen and (max-width: 413px) {
+                    width: 22%;
+                }
+                @media only screen and (max-width: 374px) {
+                    width: 21%;
+                }
+            }
+            select {
+                width: 100%;
+                height: $input_height;
+                line-height: $input_height;
+                border: 0;
+                background-color: transparent;
+                border-color: transparent;
+                position: relative;
+                @include appearance(none);
+                padding-left: 40px;
+                font-size: 1.4rem;
+                color: $l-gray;
+                @media only screen and (max-width: 767px) {
+                    padding-left: 19px;
+                }
+                @media only screen and (max-width: 413px) {
+                    padding-left: 14px;
+                }
+                @media only screen and (max-width: 374px) {
+                    padding-left: 12px;
+                } // ie10
+                &::-ms-expand {
+                    display: none;
+                }
+                option {
+                    color: #000;
+                    vertical-align: middle;
+                    line-height: 40px;
+                    border: 0;
+                }
+                &.year {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+    .selectAdd {
+        @media screen and (max-width: 736px) {
+            width: calc(100% - 70px);
+        }
+        li {
+            margin-right:0;
+            &:after {
+                width: 100%;
+                height: 1px;
+                @media screen and (max-width: 767px) {
+                    width: 100%;
+                    height: 1px;
+                }
+            }
+            &:before {
+                content: "";
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 8.7px 5px 0 5px;
+                border-color: $coke transparent transparent transparent;
+                position: absolute;
+                top: 22px;
+                right: 10px;
+                @media only screen and (max-width: 767px) {
+                    border-width: 6.7px 4px 0 4px;
+                    right: 7px;
+                }
+            }
+            select{
+                padding-left: 0;
+            }
+            &.selectBox {
+                width: 49%;
+                &:first-child{
+                    margin-right: 2%;
+                }
+            }
+
+            
+        }
+    }
+}
+
+// radio
+.label-radio {
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+}
+
+.radio {
+    position: relative;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    border: 0;
+    background: transparent;
+    display: block;
+    flex-shrink: 0;
+    @media screen and (max-width: 374px) {
+        width: 18px;
+        height: 18px;
+    }
+    &:before {
+        @include transition(all .4s cubic-bezier(.45, 1.8, .5, .75));
+        content: "";
+        z-index: 1;
+        background: $l-coke;
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-sizing: border-box;
+        @media screen and (max-width: 374px) {
+            width: 9px;
+            height: 9px;
+        }
+    }
+
+    &:checked {
+        &:before {
+            background: $coke;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: transparent;
+        border: 1px solid $l-gray;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        box-sizing: border-box;
+        @media screen and (max-width: 374px) {
+            width: 18px;
+            height: 18px;
+        }
+    }
+}

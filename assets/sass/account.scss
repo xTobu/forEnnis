@@ -1,0 +1,59 @@
+@import "compass/css3";
+// font style
+@import "color";
+// mixin
+@import "mixin";
+@import "typography";
+
+body {
+    @media only screen and (max-height: 800px) {
+       height: auto;
+    }
+   
+}
+
+.or {
+    color: $l-gray;
+    font-size: 1.3rem;
+}
+
+.form {
+    margin-top: -15px;
+    @media only screen and (max-width: 374px) {
+        // margin-top: -20px;
+    }
+}
+
+.signBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    @media only screen and (max-width: 374px) {
+        margin-top: 0;
+    }
+    a {
+        color: $l-gray;
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+        display: inline-block;
+        position: relative;
+        &:after {
+            content: "";
+            width: 0;
+            height: 1px;
+            background: $l-gray;
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            transition: width .3s ease;
+        }
+        &:hover {
+            &:after {
+                @media only screen and (min-width: 1025px) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

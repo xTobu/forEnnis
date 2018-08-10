@@ -1,0 +1,441 @@
+@import "compass/css3";
+// font style
+@import "color";
+// mixin
+@import "mixin";
+@import "typography";
+$size:55px;
+$m-size:50px;
+$s-size:45px;
+body{
+    @media only screen and (min-width: 1025px) {
+        min-height: 700px;
+    }
+}
+header {
+    li {
+        a {
+            color: white;
+            &:after {
+                background: white;
+            }
+            &:hover {
+                color: $coke;
+            }
+        }
+    }
+}
+
+.outer {
+    position: relative;
+    z-index: 1;
+    @extend %all-100;
+    overflow: hidden;
+}
+
+a.bur {
+    span {
+        &:before,
+        &:after {
+            background: white;
+        }
+    }
+}
+
+.wrap {
+    width: 100%;
+    position: relative;
+    padding-top: 150px;
+    @media screen and (max-height: 860px) {
+        padding-top: 100px;
+    }
+    @media screen and (max-height: 768px) {
+        padding-top: 90px;
+    }
+    @media screen and (max-width: 767px) {
+        padding-top: 70px;
+    }
+    @media screen and (max-width: 413px) {
+        padding-top: 60px;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        padding-top: 130px;
+    }
+    .container {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+        .tt {
+            width: 360px;
+            margin: auto;
+            @media screen and (max-height: 705px) {
+                width: 345px;
+            }
+            @media screen and (max-width: 767px) {
+                width: 65%;
+            }
+            @media screen and (max-width: 413px) {
+                width: 55%;
+            }
+        }
+        p {
+            margin: 40px 0 20px;
+            letter-spacing: 0.8px;
+            @extend %fw_r;
+            @media screen and (max-height: 705px) {
+                margin: 30px 0 20px;
+            }
+            @media screen and (max-width: 767px) {
+                margin: 10px 0 12px;
+            }
+        }
+    }
+}
+
+
+.btn {
+    width: 250px;
+    height: $size;
+    border-radius: $size;
+    line-height: $size;
+    display: block;
+    margin: auto;
+    color: $coke;
+    border: 3px solid $coke;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    @extend %fw_m;
+    box-sizing: content-box;
+    @media screen and (max-width: 767px) {
+        width: 200px;
+        letter-spacing: 4px;
+        height: $m-size;
+        border-radius: $m-size;
+        line-height: $m-size;
+    }
+    @media screen and (max-width: 374px) {
+        height: $s-size;
+        border-radius: $s-size;
+        line-height: $s-size;
+    }
+
+    span {
+        display: inline-block;
+        vertical-align: middle;
+        &:last-child {
+            @media only screen and (max-device-width: 1024px) {
+                padding-bottom: 4px;
+            }
+        }
+    }
+    .icon-btn-pot {
+        font-size: 3.2rem;
+        margin-right: 10px;
+        @media screen and (max-width: 767px) {
+            margin-right: 4px;
+            padding-bottom: 3px;
+        }
+    }
+    &:after {
+        position: absolute;
+        transition: .3s;
+        content: '';
+        width: 0;
+        left: 50%;
+        bottom: 0;
+        height: 3px;
+        background: $coke;
+        height: 120%;
+        left: -10%;
+        transform: skewX(15deg);
+        z-index: -1;
+    }
+    &:hover {
+        color: white;
+        &:after {
+            left: -10%;
+            width: 120%;
+        }
+        .icon-btn-pot:before {
+            color: white;
+        }
+    }
+}
+
+.cir-bg {
+    top: -60%;
+    width: 130%;
+    height: 102%;
+    left: -15%;
+    @media screen and (max-height: 860px) {
+        height: 105%;
+    }
+    @media screen and (max-height: 780px) {
+        height: 104%;
+    }
+    @media screen and (max-width: 1024px) {
+        width: 170%;
+        left: -35%;
+    }
+    @media screen and (max-width: 767px) {
+        height: 98%;
+        width: 200%;
+        left: -50%;
+    }
+    @media screen and (max-width: 413px) {
+        height: 93%;
+    }
+    @media screen and (max-width: 374px) {
+        width: 300%;
+        height: 86%;
+        left: -100%;
+    }
+    @media screen and (max-device-width: 767px) {
+        height: 114%;
+    }
+    @media screen and (max-device-width: 374px) {
+        width: 200%;
+        left: -50%;
+    }
+}
+
+.probox {
+    width: 100%;
+    margin-top: 90px;
+    @media screen and (max-height: 780px) {
+        margin-top: 65px;
+    }
+    @media screen and (max-height: 750px) {
+        margin-top: 30px;
+    }
+    @media screen and (max-width: 1024px) and (max-height: 768px) {
+        margin-top: 60px;
+    }
+    @media screen and (max-height: 705px) {
+        margin-top: 30px;
+    }
+    @media screen and (max-width: 767px) {
+        margin-top: 20px;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        margin-top: 130px;
+    }
+    li {
+        width: 210px;
+        display: inline-block;
+
+        margin: 0 15px;
+        font-size: 1.5rem;
+        @media screen and (max-width: 1024px) {
+            width: 19%;
+            margin: 0 20px;
+        }
+        @media screen and (max-height: 705px) {
+            width: 190px;
+            margin: 0 20px;
+        }
+        @media screen and (max-width: 767px) {
+            width: 63%;
+        }
+        @media screen and (max-width:374px) {
+            width: 62%;
+        }
+        a {
+            width: 100%;
+            display: block;
+            cursor: pointer;
+            transition: all .3s ease;
+            color: $coke;
+            @extend %fw_m;
+            &:hover {
+                @media screen and (min-width: 1025px) {
+                    transform:translateY(-10px);
+                }
+            }
+        }
+        .img {
+            display: block;
+            margin-bottom: 25px;
+            @media screen and (max-width: 1024px) {
+                margin-bottom: 20px;
+            }
+            @media screen and (max-width: 767px) {
+                margin-bottom: 20px;
+            }
+            @media screen and (max-width:374px) {
+                width: 78%;
+                margin: auto;
+            }
+        }
+        &:first-child {
+            .img {
+                @media screen and (max-width: 767px) {
+                    margin-bottom: 0;
+                }
+            }
+            .icon-pos {
+                display: inline-block;
+                vertical-align: middle;
+                padding-bottom: 2px;
+                .icon-pos {
+                    display: inline-block;
+                }
+            }
+        }
+        &:nth-child(2) {
+            @media screen and (max-width: 767px) {
+                width: 55%;
+                display: none;
+            }
+            @media screen and (max-width: 413px) {
+                width: 60%;
+            }
+            .img {
+                // padding-bottom: 8px;
+                // @media screen and (min-width: 414px) and (max-width: 767px) {
+                //     padding-bottom: 20px;
+                // }
+                @media screen and (max-width: 413px) {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        &:nth-child(3) {
+            @media screen and (max-width: 767px) {
+                display: none;
+            }
+            .img {
+                width: 195px;
+                @media screen and (max-width: 1024px) {
+                    width: 96%;
+                }
+                @media screen and (max-width: 767px) {
+                    width: 91%;
+                    margin-top: 25px;
+                }
+                @media screen and (max-width: 374px) {
+                    width: 86%;
+                    margin-bottom: 10px;
+                    margin-top: 10px;
+                }
+                float: right;
+                @include clear;
+            }
+            .txt {
+                text-align: center;
+                width: 100%;
+                display: inline-block;
+            }
+        }
+        &:nth-child(4) {
+
+            width: 150px;
+            @media screen and (max-width: 1024px) {
+                width: 16%;
+            }
+            @media screen and (max-width: 767px) {
+                width: 48%;
+                margin-top: 20px;
+                display: none;
+            }
+            @media screen and (max-width: 374px) {
+                width: 48%;
+                margin-top: 10px;
+            }
+            img {
+                @media screen and (max-width: 767px) {
+                    margin-bottom: 5px;
+                }
+                @media screen and (max-width: 374px) {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .icon-coke {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+
+.arrowbox {
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.announcement {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    @extend %all-100;
+    background: $bg;
+    @extend %fw_b;
+    .inner {
+        @extend %all-100;
+    }
+    .content {
+        @extend %pos-mid;
+        width: 65%;
+        max-width: 350px;
+        top: 45%;
+        @media screen and (max-width: 767px) {
+            width: 67%;
+            top: 43%;
+        }
+    }
+    .logo {
+        display: block;
+        width: 150px;
+        margin: auto;
+        @media screen and (max-width: 767px) {
+            width: 135px;
+        }
+        @media screen and (max-width:374px) {
+            width: 110px;
+        }
+    }
+    .ttBox {
+        margin: 30px auto;
+        @media screen and (max-width: 767px) {
+            width: 80%;
+        }
+        @media screen and (max-width: 413px) {
+            margin: 20px auto;
+        }
+    }
+    .cir-bg {
+        width: 280%;
+        height: 150%;
+        left: -90%;
+    }
+    .pot {
+        @media screen and (max-height: 768px) {
+            width: 80%;
+            margin: auto;
+        }
+        @media screen and (max-width: 767px) {
+            width: 95%;
+        }
+    }
+    p {
+        color: $coke;
+        width: 300px;
+        height: $size;
+        border-radius: $size;
+        line-height: $size;
+        background: white;
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        border: solid 5px $coke;
+        box-sizing: content-box;
+        @media screen and (max-width: 767px) {
+            width: 250px;
+        }
+    }
+}

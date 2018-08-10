@@ -1,0 +1,25 @@
+.wrap .main .form input.add {
+  margin-left: 130px;
+  margin-top: 10px; }
+  @media only screen and (max-width: 767px) {
+    .wrap .main .form input.add {
+      margin-left: 70px; } }
+.wrap .main .form p {
+  color: #e0061c;
+  margin: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
+  .wrap .main .form p span:first-child {
+    margin-right: 5px;
+    display: inline-block; }
+
+.btn-gift {
+  width: 50%; }
+
+
+
+/*# sourceMappingURL=delivery.css.map */

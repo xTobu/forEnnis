@@ -1,0 +1,184 @@
+extends ./include/layout
+block own_style
+    link(rel = 'stylesheet', href = 'css/gift.css')
+block outside
+  .lightbox
+    .lightbox_outter
+      a.btn-lightbox(href="#")
+              span.icon-close 
+      .main.main-exchange
+        h2
+          span.icon-tt-confirm
+        .txt
+          p 以 
+            span.cost
+              span.red $1,968
+              span.plus +
+              span.red 250
+              span  點
+            | 兌換
+          p
+            span.red  可口可樂® x 大同聯名電鍋
+            |  乙個
+        .btnBox
+          a.btn-gift(href="#")
+            span 取消
+          a.btn-gift(href="succeed.html")
+            span 確定
+block content
+  .wrap
+    // guest style >> add class "main-guest" on main
+    .main
+      .tt <span class="icon-tt_gift"></span>
+      .arrowbox.arrow-giftBox
+        a.left(href="#")
+          span.icon-arrow
+        a.right(href="#")
+          span.icon-arrow
+      .giftBox 
+        //pot
+        .content
+          .giftItem.giftItem-detail
+            .img
+              img(src="img/pot.png", alt="")
+            p
+              span.icon-pos
+                span.icon-coke
+              |
+              |
+              span  X 大同
+              |
+              |
+              span 聯名電鍋
+            .gift-info
+              ul
+                li
+                  span 
+                    span 每個免費兌換所需
+                    span.total 限量 200 個
+                  span.cost
+                    span.red 500
+                    span 點
+                li 
+                  span 每個加價購兌換所需
+                  span.cost
+                    span.red $1,968
+                    span.plus +
+                    span.red 250
+                    span 點
+                li
+                  span 尚餘數量
+                  span.cost
+                    span.red 200
+                    span 個
+          .selection
+            .option
+              label.label-radio
+                input.radio(type="radio" name="foo")
+                span.cost
+                  span.left 剩餘個數
+                    span 200
+                    |  個
+                  span.red 500
+                  span 點
+            .option
+              label.label-radio
+                input.radio(type="radio" name="foo")
+                span.cost
+                  span.red $1,968
+                  span.plus +
+                  span.red 250
+                  span 點
+        //bowl
+        .content(style="display:none")
+          .giftItem.giftItem-detail
+            .img.gift-bowl
+              img(src="img/bowl.png", alt="")
+            p
+              span.icon-pos
+                span.icon-coke
+              |
+              |
+              span 沙拉木碗組
+            .gift-info
+              ul
+                li
+                  span 
+                    span 每個免費兌換所需
+                  span.cost
+                    span.red 180
+                    span 點
+                li
+                  span 尚餘數量
+                  span.cost
+                    span.red 200
+                    span 組
+        //pot-s
+        .content(style="display:none")
+          .giftItem.giftItem-detail
+            .img.gift-pot-s
+              img(src="img/pot-s.png", alt="")
+            p
+              span.icon-pos
+                span.icon-coke
+              |
+              |
+              span 沙拉木碗組
+            .gift-info
+              ul
+                li
+                  span 
+                    span 每個免費兌換所需
+                  span.cost
+                    span.red 180
+                    span 點
+                li
+                  span 尚餘數量
+                  span.cost
+                    span.red 200
+                    span 組
+        //salad
+        .content(style="display:none")
+          .giftItem.giftItem-detail
+            .img.gift-salad
+              img(src="img/salad.png", alt="")
+            p
+              span.icon-pos
+                span.icon-coke
+              |
+              |
+              span 食尚沙拉罐
+            .gift-info
+              ul
+                li
+                  span 
+                    span 每組免費兌換所需
+                  span.cost
+                    span.red 24
+                    span 點
+                li
+                  span 尚餘數量
+                  span.cost
+                    span.red 200
+                    span 組
+      .pointBox_detail
+        ul
+          li
+            span 我的點數
+            span.point 1,300
+          li -
+          li
+            span 好禮點數
+            span.point 2,500
+          li.
+            =
+          li
+            span 剩餘點數
+            span.point 100
+        p(style="display:none") 此好禮已全數兌換完畢
+        p(style="display:none") 很抱歉，您的點數不足
+      // finished style >> add class "gray_bg" on r_bg
+      a.r_bg.gray_bg(href="gift_detail_potcode.html") 
+        span 我要兌換此好禮
+      a.r_line.btn_gift(href="#") 
+        span 兌換紀錄

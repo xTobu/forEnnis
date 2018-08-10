@@ -1,0 +1,35 @@
+extends ./include/layout
+block own_style
+    link(rel = 'stylesheet', href = 'css/account.css')
+block pointBox
+block content
+  .wrap
+    .main
+      .tt 
+        span.icon-tt_login
+      p.sub 請注意，Facebook及E-mail帳號登入將為2個不同帳號，
+        span 不同帳號累積之點數亦無法合併計算！
+      // form
+      a.btn-fb
+        span.icon-fb
+        span 登入
+      p.or 或
+      .form
+        ul
+          li.warn
+            label E-MAIL
+            a.del_pos(href="#")
+              span.icon-del
+            input#user-email(type='email', maxlength='50', placeholder='請輸入您的E-mail信箱')
+          li
+            label 密碼
+            a.del_pos(href="#")
+              span.icon-del
+            input#password(type='password', maxlength='8', placeholder='請輸入您的密碼')
+          p.warn 帳號和密碼不符，請重新輸入
+      a.r_bg(href="addpoint.html")
+        span 登入
+      .signBox
+        a(href="recover_s1.html") 忘記密碼?
+        a(href="register.html") 立即註冊
+

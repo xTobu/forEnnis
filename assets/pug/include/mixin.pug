@@ -1,0 +1,111 @@
+//- gift info
+mixin giftInfo(crossover,name,total,pic)
+	-var path = "img/"
+	-var file = ".png"
+	.giftItem
+		p
+			span.icon-pos
+				span.icon-coke
+			|
+			|
+			span  #{crossover}
+			|
+			|
+			span #{name}
+		p.limit 限量 #{total} 個
+		a.r_line(href="#") 好禮內容
+		.img(class!=attributes.class)
+			img(src=path + pic + file, alt="")
+//- gift
+mixin gift(pic,name,point,left,pack)
+	-var path = "img/"
+	-var file = ".png"
+	.giftBox
+		.img
+			img(src=path + pic + file, alt="")
+		p
+			span.icon-pos
+				span.icon-coke
+			|
+			|
+			span  #{crossover}
+			|
+			|
+			span #{name}
+		.info
+			ul
+				li
+					span 每組兌換所需
+					span #{left} 點
+				li
+					span 尚餘數量
+					span #{pack} 組
+//- index
+mixin product(crossover,href,pic,name)
+	-var path = "img/"
+	li
+		a(class!=attributes.class href=href)
+			|
+			span.img
+				|
+				img(src=path + pic, alt="")
+			|
+			|
+			span.txt 
+				span.break 
+					span.icon-pos
+						span.icon-coke
+					|
+					|
+					span  #{crossover}
+				|
+				|
+				span.break #{name}
+//- svg
+mixin svg(name)
+	-var path = "asset/svg/"
+	-var file = ".svg"
+	img(src=path + name + file, alt="")
+
+//- img
+mixin img(name)
+	-var path = "img/"
+	-var file = ".png"
+	img(src=path + name + file, alt="")
+
+
+//- --------------------------------------
+//- --------------------------------------
+//- --------------------------------------
+//- --------------------------------------
+mixin image(filename, caption)
+	- var path = "/img/"
+	figure.image-container&attributes(attributes)
+		img.image(src=path + filename)
+
+		if caption
+			figcaption.image-caption!=caption
+
+//- SVG Icon to be used with SVG sprite
+	Usage: +svg-icon("twitter", 32)
+	CSS: .icon
+
+	name   - [string] name of icon without prefix
+	size   - [integer] icon size in px
+	sprite - [string] path to SVG sprite
+	prefix - [string] prefix of icon name
+mixin svg-icon(name, size)
+	- var size = size || 24;
+	- var sprite = "/assets/svg/icons.svg"
+	- var prefix = "icon-"
+    
+	span.icon(aria-hidden="true")&attributes(attributes)
+		svg(viewBox='0 0 ' + size + ' ' + size width=size height=size)
+			use(xlink:href='/assets/svg/icons.svg#icon-' + name)
+//- Input field
+	Usage: +input("Type something here...")
+	CSS: .input
+	placeholder - [string] placeholder to be show if field is empty
+	value       - [string] optional default value of field
+mixin input(placeholder, value)
+	input.input(placeholder=placeholder value=value)&attributes(attributes)
