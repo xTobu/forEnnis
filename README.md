@@ -1,23 +1,22 @@
 # ennis-coke-with-food
 
-> Nuxt.js project
+> 練習專案
 
-## Build Setup
+## 建置安裝
 
-``` bash
-# install dependencies
+```bash
+# 先安裝套件
 $ npm install # Or yarn install
 
-# serve with hot reload at localhost:3030
+# 將熱開發架在 localhost:3030
+# 設定在 package.json=> config.nuxt.host
 $ npm run dev
 
-# build for production and launch server
-$ npm run build
-$ npm start
-
-# generate static project
+# 產生靜態檔
+# 小苗妳會需要的是這個
 $ npm run generate
+
+# 打包發行並執行程式
+# 如果以後學了 node.js , 才用得到
+$ npm run build && npm start
 ```
-
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
-
