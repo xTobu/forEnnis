@@ -28,7 +28,10 @@ module.exports = {
 		],
 
 		link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
-	},
+    },
+    css: [
+		'~assets/sass/style.scss',
+	],
 	/*
     ** Customize the progress bar color
     */
@@ -41,7 +44,7 @@ module.exports = {
     ** Build configuration
     */
 	build: {
-		vendor: ["~/assets/js/vendor/jquery-3.2.1.min.js"],
+		vendor: ["~/assets/js/vendor/html5shiv.js","~/assets/js/vendor/jquery-3.2.1.min.js"],
 		/*
     ** Run ESLint on save
     */

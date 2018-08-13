@@ -1,4 +1,4 @@
-$('.bur').click(function(){
-  $(this).toggleClass('active');
-  return false;
+$(".bur").click(function() {
+	$(this).toggleClass("active");
+	return false;
 });
