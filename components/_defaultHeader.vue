@@ -2,17 +2,18 @@
 header
         a.logo(href="index.html") 
             block logo
-                img(src="~assets/svg/logo.svg", alt="logo")
+                img(src="~assets/svg/logo_w.svg", alt="logo")
         block menu
             .navBox
-                // pointBox
-                block pointBox
-                    .memberInfo
-                        a.logout(href="#") 登出
-                        span  / 
-                        .pointBox
-                            span 目前點數
-                            span.number 999,299
+                //- // pointBox
+                //- block pointBox
+                //-     .memberInfo
+                //-         a.logout(href="#") 登出
+                //-         span  / 
+                //-         .pointBox
+                //-             span 目前點數
+                //-             span.number 999,299
+                memberInfo
                 //- // bur
                 //- include bur
                 bur
@@ -22,6 +23,7 @@ header
                         li
                             block index
                             a(href="index.html") 活動首頁
+                            
                         li
                             block addpoint
                             a(href="addpoint.html") 點數登錄/查詢
@@ -37,9 +39,11 @@ header
 </template>
 <script>
 import bur from "~/components/_bur.vue";
+import memberInfo from "~/components/_memberInfo.vue";
 export default {
     components: {
-        bur
+        bur,
+        memberInfo
     }
 };
 </script>

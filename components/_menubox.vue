@@ -1,18 +1,18 @@
 <template lang="pug">
 mixin navLink(href, name)
   //- attributes == {class: "btn"}
-  a(class!=attributes.class href=href)= name
+  nuxt-link(:to=href)= name
 .menuBox(style="display:none")
     .inner
         ul
             li
-                +navLink('index.html','活動首頁')(class="active")
+                +navLink("{name:'index'}",'活動首頁')
             li
-                +navLink('activity.html','點數登錄/查詢')
+                +navLink("{name:'addpoint'}",'點數登錄/查詢')
             li
-                +navLink('gift.html','兌換好禮')
+                +navLink("{name:'gift'}",'兌換好禮')
             li
-                +navLink('rule.html','活動辦法')
+                +navLink("{name:'rule'}",'活動辦法')
             li
-                +navLink('privacy.html','隱私權')
+                +navLink("{name:'privacy'}",'隱私權')
 </template>
